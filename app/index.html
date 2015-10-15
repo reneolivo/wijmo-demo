@@ -13,6 +13,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link rel="stylesheet" href="assets/wijmo5/Dist/styles/wijmo.min.css">
   </head>
   <body ng-app="wijmo5App">
     <!--[if lte IE 8]>
@@ -21,23 +22,7 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <a class="navbar-brand" href="#/">app</a>
-          </div>
-
-          <div class="collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <h1>Wijmo Test App</h1>
     </div>
 
     <div class="container">
@@ -75,7 +60,9 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
+
+      <script src="assets/wijmo5/Dist/controls/wijmo.min.js"></script>
+      <script src="assets/wijmo5/Dist/interop/angular/wijmo.angular.min.js"></script>
 </body>
 </html>
