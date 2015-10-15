@@ -1,0 +1,14 @@
+.parallax-container {
+  height: 350px;
+}
+
+#main-header h1 {
+  margin-bottom: 0;
+  color: #f44336;
+}
+
+#main-header h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #bdbdbd;
+}
