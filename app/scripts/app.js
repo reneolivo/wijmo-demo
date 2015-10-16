@@ -34,6 +34,11 @@ angular
         controller: 'StudentsformCtrl',
         controllerAs: 'studentsForm'
       })
+      .when('/report', {
+        templateUrl: 'views/students/report.html',
+        controller: 'ReportCtrl',
+        controllerAs: 'reportCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

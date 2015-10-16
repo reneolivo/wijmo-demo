@@ -1,0 +1,17 @@
+<section id="students-report" class="container">
+  <h2>Students' Report</h2>
+
+  <wj-flex-chart items-source="reportCtrl.studentsData" binding-x="student">
+    <wj-flex-chart-axis
+    wj-property="axisY"
+    format="n2"
+    min="50"
+    max="100"
+    axis-line="true"
+    major-grid="true"></wj-flex-chart-axis>
+    <wj-flex-chart-series name="English" binding="english"></wj-flex-chart-series>
+    <wj-flex-chart-series name="History" binding="history"></wj-flex-chart-series>
+    <wj-flex-chart-series name="Math" binding="math"></wj-flex-chart-series>
+    <wj-flex-chart-series name="Science" binding="science"></wj-flex-chart-series>
+  </wj-flex-chart>
+</section>
