@@ -9,25 +9,32 @@
  */
 angular.module('wijmo5App')
   .controller('StudentsCtrl', ['students', function (Students) {
+    this.fullNameFilter = '';
+    this.studentsFilter = null;
     this.students = [];
 
     Students.fetch().then(function(students) {
       this.students = students;
+
+      applyFilters(students);
     }.bind(this));
 
-    // generate some random data
-    var countries = 'US,Germany,UK,Japan,Italy,Greece'.split(','),
-        data = [];
-    for (var i = 0; i < 100; i++) {
-        data.push({
-            id: i,
-            country: countries[i % countries.length],
-            date: new Date(2014, i % 12, i % 28),
-            amount: Math.random() * 10000,
-            active: i % 4 == 0
-        });
-    }
+    var applyFilters = function applyFilters(students) {
+      this.studentsFilter = new wijmo.collections.CollectionView(students);
+      this.studentsFilter.filter = fullNameFilterFunc;
+    }.bind(this);
 
-    // add data array to scope
-    this.data = data;
+    var fullNameFilter = '';
+    function fullNameFilterFunc(item) {
+      if (!fullNameFilter) return true;
+
+      var fullName = item.firstName + ' ' + item.lastName;
+
+      return new RegExp(fullNameFilter, 'i').test(fullName);
+    };
+
+    this.refreshFilter = function refreshFilter() {
+      fullNameFilter = this.fullNameFilter;
+      this.studentsFilter.refresh();
+    }.bind(this);
   }]);

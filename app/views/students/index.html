@@ -1,7 +1,12 @@
 <section id="students-index" class="container">
   <h2>Students in the system</h2>
 
-  <wj-flex-grid items-source="studentsCtrl.students">
+  <div input-field class="col s12">
+    <label for="filter-full-name">Filter by full name</label>
+    <input id="filter-full-name" type="text" ng-model="studentsCtrl.fullNameFilter" ng-change="studentsCtrl.refreshFilter()" />
+  </div>
+
+  <wj-flex-grid items-source="studentsCtrl.studentsFilter">
     <wj-flex-grid-column header="First Name" binding="$data" is-read-only="true">
       {{$item.lastName}}, {{$item.firstName}}
     </wj-flex-grid-column>

@@ -4,5 +4,6 @@ wijmo5app:
     - .:/home/dock/app
   ports:
     - 9000:9000
+    - 3000:3000
     - 35729:35729
   user: dock
