@@ -23,6 +23,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/form', {
+        templateUrl: 'views/students/form.html',
+        controller: 'StudentsformCtrl',
+        controllerAs: 'studentsForm'
+      })
       .otherwise({
         redirectTo: '/'
       });
