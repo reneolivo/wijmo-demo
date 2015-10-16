@@ -12,6 +12,8 @@ angular.module('wijmo5App')
     this.fullNameFilter = '';
     this.studentsFilter = null;
     this.students = [];
+    this.filterTypes = ['By Full Name', 'By Guardian'];
+    this.filterBy = this.filterTypes[0];
 
     Students.fetch().then(function(students) {
       this.students = students;
@@ -25,16 +27,21 @@ angular.module('wijmo5App')
     }.bind(this);
 
     var fullNameFilter = '';
+    var filterByGuardian = false;
     function fullNameFilterFunc(item) {
       if (!fullNameFilter) return true;
 
-      var fullName = item.firstName + ' ' + item.lastName;
+      if (filterByGuardian) {
+        return new RegExp(fullNameFilter, 'i').test(item.guardiansName);
+      }
 
+      var fullName = item.firstName + ' ' + item.lastName;
       return new RegExp(fullNameFilter, 'i').test(fullName);
     };
 
     this.refreshFilter = function refreshFilter() {
       fullNameFilter = this.fullNameFilter;
+      filterByGuardian = this.filterBy == this.filterTypes[1];
       this.studentsFilter.refresh();
     }.bind(this);
   }]);
