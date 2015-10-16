@@ -13,16 +13,9 @@ describe('Controller: StudentsformCtrl', function () {
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
     StudentsformCtrl = $controller('StudentsformCtrl', {
-      $scope: scope,
-      students: students
+      $scope: scope
+      // place here mocked dependencies
     });
   }));
 
-  it('should declare a list of students', function () {
-    expect(StudentsformCtrl.students).to.be.an.instanceof(Array);
-  });
-
-  it('should fetch a list of students from the server', function() {
-    expect(students).to.have.been.called;
-  });
 });
