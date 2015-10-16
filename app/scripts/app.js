@@ -14,7 +14,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ui.materialize'
+    'ui.materialize',
+    'wj'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -22,6 +23,11 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
+      })
+      .when('/students', {
+        templateUrl: 'views/students/index.html',
+        controller: 'StudentsCtrl',
+        controllerAs: 'studentsCtrl'
       })
       .when('/form', {
         templateUrl: 'views/students/form.html',

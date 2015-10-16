@@ -1,0 +1,47 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Snow",
+    "DOB": "2000-01-01",
+    "guardiansName": "Eddard Stark",
+    "guardiansPhone": "+1-202-555-0127",
+    "guardiansEmail": "hand.of.the.king@kingslanding.realm",
+    "sideNotes": "Knows nothing",
+    "grades": {
+      "english": {"Q1": 87, "Q2": 68, "Q3": 92},
+      "history": {"Q1": 85, "Q2": 96, "Q3": 75},
+      "math": {"Q1": 89, "Q2": 79, "Q3": 85},
+      "science": {"Q1": 88, "Q2": 67, "Q3": 77}
+    }
+  },
+  {
+    "firstName": "Jamie",
+    "lastName": "Lannister",
+    "DOB": "1995-03-02",
+    "guardiansName": "Tywin Lannister",
+    "guardiansPhone": "+1-202-555-8573",
+    "guardiansEmail": "the.real.hand.of.the.king@kingslanding.realm",
+    "sideNotes": "Can't type well",
+    "grades": {
+      "english": {"Q1": 75, "Q2": 96, "Q3": 76 },
+      "history": {"Q1": 85, "Q2": 93, "Q3": 84},
+      "math": {"Q1": 95, "Q2": 83, "Q3": 72},
+      "science": {"Q1": 73, "Q2": 84, "Q3": 62}
+    }
+  },
+  {
+    "firstName": "Daenerys",
+    "lastName": "Targaryen",
+    "DOB": "2001-04-03",
+    "guardiansName": "Aerys II Targaryen",
+    "guardiansPhone": "+1-202-555-1235",
+    "guardiansEmail": "the.mad.king@heaven.realm",
+    "sideNotes": "Likes to draw dragons",
+    "grades": {
+      "english": {"Q1": 98, "Q2": 83, "Q3": 73},
+      "history": {"Q1": 94, "Q2": 72, "Q3": 63},
+      "math": {"Q1": 84, "Q2": 71, "Q3": 91},
+      "science": {"Q1": 81, "Q2": 52, "Q3": 76}
+    }
+  }
+]

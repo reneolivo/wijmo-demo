@@ -1,0 +1,13 @@
+<section id="students-index" class="container">
+  <h2>Students in the system</h2>
+
+  <wj-flex-grid items-source="studentsCtrl.students">
+    <wj-flex-grid-column header="First Name" binding="$data" is-read-only="true">
+      {{$item.lastName}}, {{$item.firstName}}
+    </wj-flex-grid-column>
+    <wj-flex-grid-column header="DOB" binding="DOB"></wj-flex-grid-column>
+    <wj-flex-grid-column header="Guardian's Name" binding="guardiansName"></wj-flex-grid-column>
+    <wj-flex-grid-column header="Guardian's Email" binding="guardiansEmail"></wj-flex-grid-column>
+    <wj-flex-grid-column header="Side Notes" binding="sideNotes" width="*"></wj-flex-grid-column>
+  </wj-flex-grid>
+</section>
